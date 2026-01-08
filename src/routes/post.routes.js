@@ -11,8 +11,10 @@ router.delete('/:id', postController.deletePost);
 router.put('/:id', postController.updatePost);
 
 // Comments
+// Comments
 router.get('/:postId/comments', commentController.getComments);
 router.post('/:postId/comments', commentController.createComment);
+router.post('/comments/:commentId/like', commentController.toggleLike);
 
 // Likes
 router.get('/:postId/like', likeController.checkLikeStatus);
