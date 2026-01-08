@@ -15,6 +15,7 @@ router.get('/:postId/comments', commentController.getComments);
 router.post('/:postId/comments', commentController.createComment);
 
 // Likes
+router.get('/:postId/like', likeController.checkLikeStatus);
 router.post('/:postId/like', likeController.toggleLike);
 
 module.exports = router;
